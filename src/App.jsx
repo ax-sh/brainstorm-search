@@ -7,6 +7,10 @@ const sentences = [
   'what is {}',
   'why does {} work',
   '{} alternatives',
+  'how to use {}',
+  'when to use {}',
+  'why use {}',
+  'where to find {}',
 ];
 
 function App() {
