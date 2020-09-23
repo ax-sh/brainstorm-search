@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+import SearchInput from './components/search-input';
 import './App.css';
 
+const sentences = [
+  'pros and cons of {}',
+  'what is {}',
+  'why does {} work',
+  '{} alternatives',
+];
+
 function App() {
+  const [query, setQuery] = useState('');
+
+  const onChange = ({ target }) => {
+    setQuery(target.value);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {sentences.map((i) => (
+        <SearchInput sentence={i} value={query} onChange={onChange} />
+      ))}
     </div>
   );
 }
