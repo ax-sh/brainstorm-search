@@ -1,26 +1,34 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+import SearchInput from './components/search-input';
 import './App.css';
+import sentences from './queries';
 
-function App() {
+const App = () => {
+  const [query, setQuery] = useState(localStorage.getItem('query'));
+
+  const onChange = ({ target }) => {
+    localStorage.setItem('query', target.value);
+    setQuery(target.value);
+    const len = query.length + 6;
+    target.style.width = len ? len + 'ch' : 'inherit';
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <div className="App">
+        {/* TODO make a nav for google search config  */}
+        <nav>Settings</nav>
+
+        {sentences.map((i, n) => (
+          <SearchInput
+            index={n}
+            sentence={i}
+            value={query}
+            onChange={onChange}
+          />
+        ))}
+      </div>
+    </main>
   );
-}
+};
 
 export default App;
