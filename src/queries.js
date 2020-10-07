@@ -1,6 +1,13 @@
 // who what when where why how
 
-const txt = `
+const parseSentences = (txt) => {
+	return txt
+		.split("\n")
+		.map((i) => i.trim())
+		.filter((i) => i && i.length !== 0);
+};
+
+const defaultSentences = `
 
 define {}
 {} meaning
@@ -15,10 +22,5 @@ why use {}
 who is {}
 
 how does {} work?`;
-const lines = txt
-  .split('\n')
-  .map((i) => i.trim())
-  .filter((i) => i && i.length !== 0);
 
-const sentences = lines;
-export default sentences;
+export { defaultSentences, parseSentences };
