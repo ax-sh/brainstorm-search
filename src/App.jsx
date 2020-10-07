@@ -2,6 +2,31 @@ import React, { useState } from "react";
 import SearchInput from "./components/search-input";
 import "./App.css";
 import { defaultSentences, parseSentences } from "./queries";
+import styled from "styled-components";
+
+const TextArea = styled.textarea`
+	width: 100%;
+	min-height: 300px;
+	background-color: #333;
+	color: #fff;
+	font-size: 1.5em;
+	display: ${(props) => (props.visibility ? "inline-block" : "none")};
+`;
+
+const EditCustomSentences = ({ text }) => {
+	const [toggle, setToggle] = useState(false);
+	const handleToggle = () => {
+		setToggle(!toggle);
+	};
+	return (
+		<div>
+			<div>
+				<button onClick={handleToggle}>Modify Template</button>
+			</div>
+			<TextArea visibility={toggle} value={text && text.trim()} />
+		</div>
+	);
+};
 
 const sentences = parseSentences(defaultSentences);
 const App = () => {
@@ -17,6 +42,7 @@ const App = () => {
 			<div className="App">
 				{/* TODO make a nav for google search config  */}
 				{/* <nav>Settings</nav> */}
+				<EditCustomSentences text={defaultSentences} />
 
 				{sentences.map((i, n) => (
 					<SearchInput index={n} sentence={i} value={lastQuery} onChange={onChange} />
