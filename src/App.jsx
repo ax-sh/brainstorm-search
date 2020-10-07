@@ -5,7 +5,7 @@ import { defaultSentences, parseSentences } from "./queries";
 import styled from "styled-components";
 
 const TextArea = styled.textarea`
-	width: 100%;
+	width: 80%;
 	min-height: 300px;
 	background-color: #333;
 	color: #fff;
