@@ -10,6 +10,7 @@ const TextArea = styled.textarea`
 	background-color: #333;
 	color: #fff;
 	font-size: 1.5em;
+	padding: 10px;
 	display: ${(props) => (props.visibility ? "inline-block" : "none")};
 `;
 
