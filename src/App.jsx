@@ -16,7 +16,7 @@ const App = () => {
     <main>
       <div className="App">
         {/* TODO make a nav for google search config  */}
-        <nav>Settings</nav>
+        {/* <nav>Settings</nav> */}
 
         {sentences.map((i, n) => (
           <SearchInput
