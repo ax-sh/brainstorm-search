@@ -62,7 +62,7 @@ const SearchInput = ({ sentence, value, onChange }) => {
 				}}
 			/>
 			<Span>{last}</Span>
-			<Button onClick={onClick}>Go</Button>
+			<Button onClick={onClick}>Search</Button>
 		</Div>
 	);
 };
