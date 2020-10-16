@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "466e1738ac7d0795cac7bda72f84835e",
+    "revision": "2e983c1f1b1449243db34ce45343ba28",
     "url": "/brainstorm-search/index.html"
   },
   {
-    "revision": "c30a27f63e5d1265d673",
+    "revision": "9be5f41865c8ce0c691a",
     "url": "/brainstorm-search/static/css/main.a353731b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/brainstorm-search/static/js/2.2c06cb54.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c30a27f63e5d1265d673",
-    "url": "/brainstorm-search/static/js/main.784514ea.chunk.js"
+    "revision": "9be5f41865c8ce0c691a",
+    "url": "/brainstorm-search/static/js/main.e349e368.chunk.js"
   },
   {
     "revision": "a51e867ae2a0c1bc2b22",

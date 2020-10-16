@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/brainstorm-search/precache-manifest.41517e4f8716a719e8f558135fd8e31d.js"
+  "/brainstorm-search/precache-manifest.bd255d713d34c2eb527998800af47cae.js"
 );
 
 self.addEventListener('message', (event) => {
